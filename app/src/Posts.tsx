@@ -49,32 +49,11 @@ function Posts() {
 			)
 	}, [])
 	return (
-		<Box className={classes.wrPostser}>
-			<Button
-				onClick={() => {
-					const requestOptions = {
-						method: 'POST',
-						headers: { 'Content-Type': 'Postslication/json' },
-						body: JSON.stringify({ id: 'newpost' })
-					};
-					fetch('http://localhost:3000/add', requestOptions)
-						.then(response => console.log(response))
-						.then((result) => {
-							console.log("server success");
-							console.log(result);
-						},
-							// Note: it's important to handle errors here
-							// instead of a catch() block so that we don't swallow
-							// exceptions from actual bugs in components.
-							(error) => {
-								console.log("server error")
-							});
-				}}
-			>Add new post</Button>
+		<>
 			{
 				posts?.map((post) => <Box key={post.id}>{post}</Box>)
 			}
-		</Box>
+		</>
 	);
 }
 

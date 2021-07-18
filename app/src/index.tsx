@@ -11,7 +11,7 @@ ReactDOM.render(
 			<Switch>
 				<Switch>
 					<Route exact path="/" component={App} />
-					<Route exact path="/posts" component={Posts} />
+					{/* <Route exact path="/" component={Posts} /> */}
 				</Switch>
 			</Switch>
 		</BrowserRouter>
